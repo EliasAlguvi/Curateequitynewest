@@ -1,0 +1,19 @@
+PUT THE 5 TEAM PHOTOS IN THIS FOLDER (public/team/).
+
+Use these exact base filenames. The extension can be
+.jpg, .jpeg, .png, or .webp — the site tries each automatically:
+
+  thomas-karlsson   (e.g. thomas-karlsson.jpg)
+  elias-jacobson
+  frida-lonnqvist
+  nalle-soderstrom
+  ulf-soderstrom
+
+Rules:
+- all lowercase
+- use hyphens, no spaces
+- keep the special-character-free spelling above (o not ö)
+- one file per person
+
+After adding them here, commit/push to GitHub. Netlify rebuilds
+automatically and the photos will appear on the Team section.

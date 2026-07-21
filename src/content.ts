@@ -134,27 +134,27 @@ export const team = {
     {
       name: 'Thomas Karlsson',
       role: 'Founding Partner',
-      photo: '/team/thomas-karlsson.jpg',
+      photo: '/team/thomas-karlsson',
     },
     {
       name: 'Elias Jacobson',
       role: 'Founding Partner',
-      photo: '/team/elias-jacobson.jpg',
+      photo: '/team/elias-jacobson',
     },
     {
       name: 'Frida Lönnqvist',
       role: 'Board Member',
-      photo: '/team/frida-lonnqvist.jpg',
+      photo: '/team/frida-lonnqvist',
     },
     {
       name: 'Nalle Söderström',
       role: 'Board Member',
-      photo: '/team/nalle-soderstrom.jpg',
+      photo: '/team/nalle-soderstrom',
     },
     {
       name: 'Ulf Söderström',
       role: 'Board Member',
-      photo: '/team/ulf-soderstrom.jpg',
+      photo: '/team/ulf-soderstrom',
     },
   ],
 }

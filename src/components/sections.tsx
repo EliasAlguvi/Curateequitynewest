@@ -233,15 +233,19 @@ function TeamPlaceholder({ index }: { index: number }) {
   )
 }
 
+const PHOTO_EXTS = ['.jpg', '.jpeg', '.png', '.webp', '.JPG', '.JPEG', '.PNG']
+
 function TeamPhoto({ src, alt, index }: { src: string; alt: string; index: number }) {
-  const [errored, setErrored] = useState(false)
-  if (errored) return <TeamPlaceholder index={index} />
+  // `src` is a base path without extension (e.g. /team/thomas-karlsson).
+  // Try common image extensions in order before falling back to the placeholder.
+  const [extIndex, setExtIndex] = useState(0)
+  if (extIndex >= PHOTO_EXTS.length) return <TeamPlaceholder index={index} />
   return (
     <img
-      src={src}
+      src={`${src}${PHOTO_EXTS[extIndex]}`}
       alt={alt}
       className="h-full w-full object-cover object-top grayscale"
-      onError={() => setErrored(true)}
+      onError={() => setExtIndex((i) => i + 1)}
     />
   )
 }

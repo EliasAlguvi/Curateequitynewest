@@ -26,9 +26,11 @@ export function SiteNav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500 ${
-        !isHome || scrolled || open
-          ? 'border-b border-[var(--color-line)] bg-[color-mix(in_srgb,var(--color-paper)_88%,transparent)] backdrop-blur-md'
-          : 'border-b border-transparent'
+        !isHome
+          ? 'border-b border-[var(--color-line)] bg-[var(--color-paper)]'
+          : scrolled || open
+            ? 'border-b border-[var(--color-line)] bg-[color-mix(in_srgb,var(--color-paper)_88%,transparent)] backdrop-blur-md'
+            : 'border-b border-transparent'
       }`}
     >
       <div className="shell flex h-[4.75rem] items-center justify-between md:h-[5.5rem]">
