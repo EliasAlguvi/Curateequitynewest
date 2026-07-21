@@ -87,12 +87,12 @@ export const sectors = {
   title: 'Backing exceptional teams in specialist markets.',
   items: [
     {
-      title: 'Energy Transition',
-      body: 'Investing in infrastructure and real assets accelerating the transition to a more resilient energy system.',
-    },
-    {
       title: 'Niche Private Equity',
       body: 'Partnering with specialist managers where deep expertise creates sustainable competitive advantages.',
+    },
+    {
+      title: 'Energy Transition',
+      body: 'Investing in infrastructure and real assets accelerating the transition to a more resilient energy system.',
     },
     {
       title: 'Future Platforms',
