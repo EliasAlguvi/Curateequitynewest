@@ -182,7 +182,19 @@ export function Platforms() {
             <span className="eyebrow text-[var(--color-brass)] md:col-span-1">
               {`P.0${i + 1}`}
             </span>
-            <h3 className={`display t-h3 md:col-span-4 ${INK}`}>{it.name}</h3>
+            <h3 className={`display t-h3 md:col-span-4 ${INK}`}>
+              <a
+                href={it.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="arrow-link transition-colors duration-300 hover:text-[var(--color-navy)]"
+              >
+                {it.name}
+                <span className="arrow" aria-hidden="true">
+                  →
+                </span>
+              </a>
+            </h3>
             <p className="t-body max-w-[54ch] text-[var(--color-body)] md:col-span-7">
               {it.body}
             </p>
@@ -272,18 +284,37 @@ export function Team() {
       <div className="shell mt-16 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
         {team.members.map((m, i) => (
           <Reveal key={m.name} delay={i * 80}>
-            <div className="relative aspect-[4/5] overflow-hidden bg-[var(--color-paper)]">
-              {m.photo ? (
-                <TeamPhoto src={m.photo} alt={m.name} index={i} />
-              ) : (
-                <TeamPlaceholder index={i} />
-              )}
-              <span className="absolute right-4 top-4 h-5 w-5 border-r border-t border-[var(--color-brass)]" />
-            </div>
-            <h3 className={`display mt-5 text-lg ${INK}`}>{m.name}</h3>
-            <p className="mt-1 text-[0.85rem] font-medium uppercase tracking-wide text-[var(--color-brass)]">
-              {m.role}
-            </p>
+            <a
+              href={m.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+              aria-label={`${m.name} on LinkedIn`}
+            >
+              <div className="relative aspect-[4/5] overflow-hidden bg-[var(--color-paper)]">
+                {m.photo ? (
+                  <TeamPhoto src={m.photo} alt={m.name} index={i} />
+                ) : (
+                  <TeamPlaceholder index={i} />
+                )}
+              </div>
+              <div className="mt-5 flex items-start justify-between gap-3">
+                <div>
+                  <h3 className={`display text-lg ${INK}`}>{m.name}</h3>
+                  <p className="mt-1 text-[0.85rem] font-medium uppercase tracking-wide text-[var(--color-brass)]">
+                    {m.role}
+                  </p>
+                </div>
+                <span
+                  className="mt-1 text-[var(--color-body)] transition-colors duration-300 group-hover:text-[var(--color-navy)]"
+                  aria-hidden="true"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
+                  </svg>
+                </span>
+              </div>
+            </a>
           </Reveal>
         ))}
       </div>

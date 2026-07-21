@@ -107,16 +107,19 @@ export const platforms = {
   intro: 'Building specialist investment platforms with exceptional teams.',
   items: [
     {
-      name: 'ByWit',
+      name: 'byWiT',
       body: 'A private investment company with a long-term focus on building businesses and investment platforms across multiple sectors.',
+      href: 'https://bywit.se/',
     },
     {
       name: 'Oryx Capital',
       body: 'A specialist investment platform focused on complex and distressed investment opportunities.',
+      href: 'https://oryxcapital.se/',
     },
     {
       name: 'Chapter 3',
       body: 'Building the next chapter of renewable energy investing.',
+      href: 'https://chapter3.se/',
     },
   ],
   next: {
@@ -135,26 +138,31 @@ export const team = {
       name: 'Thomas Karlsson',
       role: 'Founding Partner',
       photo: '/team/thomas-karlsson',
+      linkedin: 'https://www.linkedin.com/in/thomas-karlsson-8560285/',
     },
     {
       name: 'Elias Jacobson',
       role: 'Founding Partner',
       photo: '/team/elias-jacobson',
+      linkedin: 'https://www.linkedin.com/in/elias-jacobson-65420686/',
     },
     {
       name: 'Frida Lönnqvist',
       role: 'Board Member',
       photo: '/team/frida-lonnqvist',
+      linkedin: 'https://www.linkedin.com/in/frida-l%C3%B6nnqvist/',
     },
     {
       name: 'Nalle Söderström',
       role: 'Board Member',
       photo: '/team/nalle-soderstrom',
+      linkedin: 'https://www.linkedin.com/in/nalles/',
     },
     {
       name: 'Ulf Söderström',
       role: 'Board Member',
       photo: '/team/ulf-soderstrom',
+      linkedin: 'https://www.linkedin.com/in/ulf-s%C3%B6derstr%C3%B6m-a6a6852b/',
     },
   ],
 }
