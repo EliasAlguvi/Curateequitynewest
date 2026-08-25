@@ -43,6 +43,13 @@ export function Contact() {
               >
                 {CONTACT_EMAIL}
               </a>
+              <address className="mt-3 text-[0.95rem] not-italic text-[rgba(248,246,242,0.6)]">
+                {contact.address.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
+              </address>
             </div>
           </Reveal>
         </div>
