@@ -1,4 +1,4 @@
-import { CONTACT_EMAIL, nav } from '@/content'
+import { CONTACT_EMAIL, contact, nav } from '@/content'
 
 const YEAR = 2026
 
@@ -49,9 +49,13 @@ export function SiteFooter() {
             >
               {CONTACT_EMAIL}
             </a>
-            <p className="mt-3 text-[0.95rem] text-[rgba(248,246,242,0.66)]">
-              The Nordics
-            </p>
+            <address className="mt-3 text-[0.95rem] not-italic text-[rgba(248,246,242,0.66)]">
+              {contact.address.map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
+            </address>
           </div>
         </div>
 

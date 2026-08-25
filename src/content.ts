@@ -195,6 +195,7 @@ export const contact = {
   title: 'Building something exceptional starts with the right partner.',
   body: 'Whether you are launching a new investment strategy or scaling an established platform, we would welcome the opportunity to start a conversation.',
   cta: { label: 'Get in touch', href: `mailto:${CONTACT_EMAIL}` },
+  address: ['Malmskillnadsgatan 44 a', '111 57 Stockholm'],
 }
 
 /* ------------------------------------------------------------------ *
