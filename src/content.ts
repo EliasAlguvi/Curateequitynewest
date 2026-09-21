@@ -117,9 +117,9 @@ export const platforms = {
       href: 'https://oryxcapital.se/',
     },
     {
-      name: 'Chapter 3',
+      name: 'Södra Vindbolaget',
       body: 'Building the next chapter of renewable energy investing.',
-      href: 'https://chapter3.se/',
+      href: 'https://www.sodravindbolaget.se',
     },
   ],
   next: {
@@ -184,8 +184,8 @@ export const perspectives = {
     },
     {
       kind: 'Announcement',
-      title: 'Introducing Chapter 3.',
-      slug: 'chapter-3',
+      title: 'Introducing Södra Vindbolaget.',
+      slug: 'sodra-vindbolaget',
     },
   ],
 }
@@ -195,7 +195,6 @@ export const contact = {
   title: 'Building something exceptional starts with the right partner.',
   body: 'Whether you are launching a new investment strategy or scaling an established platform, we would welcome the opportunity to start a conversation.',
   cta: { label: 'Get in touch', href: `mailto:${CONTACT_EMAIL}` },
-  address: ['Malmskillnadsgatan 44 a', '111 57 Stockholm'],
 }
 
 /* ------------------------------------------------------------------ *
@@ -229,13 +228,13 @@ export const perspectiveArticles: Record<
       'At Curate Equity, we bridge the gap between entrepreneurial ambition and institutional requirements. By providing comprehensive infrastructure—covering fund structuring, compliance, and capital partnerships—we build investment businesses designed to compound value over decades, rather than simply assembling individual funds.',
     ],
   },
-  'chapter-3': {
+  'sodra-vindbolaget': {
     kind: 'Announcement',
-    title: 'Introducing Chapter 3.',
+    title: 'Introducing Södra Vindbolaget.',
     body: [
-      'We are proud to announce the launch of Chapter 3, a new specialist investment platform developed in partnership with Curate Equity. The first two chapters of wind power focused on building and scaling infrastructure. Now, Chapter 3 is writing the next phase: creating greater value from the wind power that already exists.',
-      'Utilizing a proprietary software and data platform, Chapter 3 identifies existing wind assets ready for modernization. Through targeted early-stage investments in Refit & Repowering, intelligent control systems, and battery storage (BESS), the team will optimize and extend the life of these critical assets.',
-      'Built on Curate Equity\'s institutional foundation, Chapter 3 represents our commitment to backing exceptional teams addressing structural shifts across industries.',
+      'We are proud to announce the launch of Södra Vindbolaget, a new specialist investment platform developed in partnership with Curate Equity. The first two chapters of wind power focused on building and scaling infrastructure. Now, Södra Vindbolaget is writing the next phase: creating greater value from the wind power that already exists.',
+      'Utilizing a proprietary software and data platform, Södra Vindbolaget identifies existing wind assets ready for modernization. Through targeted early-stage investments in Refit & Repowering, intelligent control systems, and battery storage (BESS), the team will optimize and extend the life of these critical assets.',
+      'Built on Curate Equity\'s institutional foundation, Södra Vindbolaget represents our commitment to backing exceptional teams addressing structural shifts across industries.',
     ],
     quote: {
       text: 'The first two chapters of wind energy were about installation and scale. The third chapter is about intelligence, optimization, and extracting structural value from the infrastructure we\'ve already built.',
