@@ -11,8 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PerspectivesSpecialistManagersRouteImport } from './routes/perspectives/specialist-managers'
+import { Route as PerspectivesSodraVindbolagetRouteImport } from './routes/perspectives/sodra-vindbolaget'
 import { Route as PerspectivesInstitutionalPlatformsRouteImport } from './routes/perspectives/institutional-platforms'
-import { Route as PerspectivesChapter3RouteImport } from './routes/perspectives/chapter-3'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -25,62 +25,63 @@ const PerspectivesSpecialistManagersRoute =
     path: '/perspectives/specialist-managers',
     getParentRoute: () => rootRouteImport,
   } as any)
+const PerspectivesSodraVindbolagetRoute =
+  PerspectivesSodraVindbolagetRouteImport.update({
+    id: '/perspectives/sodra-vindbolaget',
+    path: '/perspectives/sodra-vindbolaget',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PerspectivesInstitutionalPlatformsRoute =
   PerspectivesInstitutionalPlatformsRouteImport.update({
     id: '/perspectives/institutional-platforms',
     path: '/perspectives/institutional-platforms',
     getParentRoute: () => rootRouteImport,
   } as any)
-const PerspectivesChapter3Route = PerspectivesChapter3RouteImport.update({
-  id: '/perspectives/chapter-3',
-  path: '/perspectives/chapter-3',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/perspectives/chapter-3': typeof PerspectivesChapter3Route
   '/perspectives/institutional-platforms': typeof PerspectivesInstitutionalPlatformsRoute
+  '/perspectives/sodra-vindbolaget': typeof PerspectivesSodraVindbolagetRoute
   '/perspectives/specialist-managers': typeof PerspectivesSpecialistManagersRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/perspectives/chapter-3': typeof PerspectivesChapter3Route
   '/perspectives/institutional-platforms': typeof PerspectivesInstitutionalPlatformsRoute
+  '/perspectives/sodra-vindbolaget': typeof PerspectivesSodraVindbolagetRoute
   '/perspectives/specialist-managers': typeof PerspectivesSpecialistManagersRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/perspectives/chapter-3': typeof PerspectivesChapter3Route
   '/perspectives/institutional-platforms': typeof PerspectivesInstitutionalPlatformsRoute
+  '/perspectives/sodra-vindbolaget': typeof PerspectivesSodraVindbolagetRoute
   '/perspectives/specialist-managers': typeof PerspectivesSpecialistManagersRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/perspectives/chapter-3'
     | '/perspectives/institutional-platforms'
+    | '/perspectives/sodra-vindbolaget'
     | '/perspectives/specialist-managers'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/perspectives/chapter-3'
     | '/perspectives/institutional-platforms'
+    | '/perspectives/sodra-vindbolaget'
     | '/perspectives/specialist-managers'
   id:
     | '__root__'
     | '/'
-    | '/perspectives/chapter-3'
     | '/perspectives/institutional-platforms'
+    | '/perspectives/sodra-vindbolaget'
     | '/perspectives/specialist-managers'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  PerspectivesChapter3Route: typeof PerspectivesChapter3Route
   PerspectivesInstitutionalPlatformsRoute: typeof PerspectivesInstitutionalPlatformsRoute
+  PerspectivesSodraVindbolagetRoute: typeof PerspectivesSodraVindbolagetRoute
   PerspectivesSpecialistManagersRoute: typeof PerspectivesSpecialistManagersRoute
 }
 
@@ -100,6 +101,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PerspectivesSpecialistManagersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/perspectives/sodra-vindbolaget': {
+      id: '/perspectives/sodra-vindbolaget'
+      path: '/perspectives/sodra-vindbolaget'
+      fullPath: '/perspectives/sodra-vindbolaget'
+      preLoaderRoute: typeof PerspectivesSodraVindbolagetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/perspectives/institutional-platforms': {
       id: '/perspectives/institutional-platforms'
       path: '/perspectives/institutional-platforms'
@@ -107,21 +115,14 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PerspectivesInstitutionalPlatformsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/perspectives/chapter-3': {
-      id: '/perspectives/chapter-3'
-      path: '/perspectives/chapter-3'
-      fullPath: '/perspectives/chapter-3'
-      preLoaderRoute: typeof PerspectivesChapter3RouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  PerspectivesChapter3Route: PerspectivesChapter3Route,
   PerspectivesInstitutionalPlatformsRoute:
     PerspectivesInstitutionalPlatformsRoute,
+  PerspectivesSodraVindbolagetRoute: PerspectivesSodraVindbolagetRoute,
   PerspectivesSpecialistManagersRoute: PerspectivesSpecialistManagersRoute,
 }
 export const routeTree = rootRouteImport
